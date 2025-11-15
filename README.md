@@ -13,31 +13,46 @@ LangChain과 Chroma를 활용한 RAG(Retrieval-Augmented Generation) 시스템�
 - 💬 출처 정보가 포함된 답변 생성
 - 🔄 실시간 Knowledge Base 동기화
 
+## 📺 시연 영상
+![Image](https://github.com/user-attachments/assets/d6be038b-9bd9-414b-9573-94b7a26e522d)
+
 ## 🚀 실행 방법
 
-### 1. 환경 설정
+### 1. 패키지 설치
 ```bash
-# 패키지 설치
 pip install -r requirements.txt
-
-# 환경 변수 설정
-echo "GOOGLE_API_KEY=your_Google_AI_API_key" > .env
 ```
 
-### 2. PDF 문서 추가
+### 2. 환경 변수 설정
+```bash
+# 방법 1: .env.example 복사 후 수정
+cp .env.example .env
+# .env 파일을 열어서 GOOGLE_API_KEY 입력
+
+# 방법 2: 직접 생성
+echo "GOOGLE_API_KEY=your_api_key" > .env
+```
+
+### 3. PDF 문서 추가
 ```bash
 # PDF 파일을 data 폴더에 추가
 cp your_document.pdf data/
 ```
 
-### 3. 애플리케이션 실행
+### 4. 애플리케이션 실행
 ```bash
 python app.py
 ```
 
 브라우저에서 `http://localhost:7860` 접속
 
-### 4. 사용 방법
+> ⚠️ **첫 실행 시 주의사항**
+> - 임베딩 모델(multilingual-e5-large) 자동 다운로드: ~2.2GB
+> - 다운로드 시간: 약 1~3분 (인터넷 속도에 따라 다름)
+> - 다운로드 위치: `~/.cache/huggingface/`
+> - 이후 실행부터는 캐시된 모델 사용으로 빠르게 시작됩니다
+
+### 5. 사용 방법
 1. **Knowledge Base Sync** 버튼 클릭 → PDF 문서 동기화
 2. **RAG 모드 사용** 체크박스 활성화
 3. 문서 내용에 대해 질문
