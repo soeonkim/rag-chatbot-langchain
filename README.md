@@ -14,7 +14,7 @@ LangChain과 Chroma를 활용한 RAG(Retrieval-Augmented Generation) 시스템�
 - 🔄 실시간 Knowledge Base 동기화
 
 ## 📺 시연 영상
-![Image](https://github.com/user-attachments/assets/d6be038b-9bd9-414b-9573-94b7a26e522d)
+![Image](https://github.com/user-attachments/assets/9fe35841-55c3-4087-8bdf-e80cd2771d33)
 
 ## 🚀 실행 방법
 
