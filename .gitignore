@@ -1,0 +1,5 @@
+venv/
+.env
+data/*
+!data/.gitkeep
+chroma_langchain_db/
